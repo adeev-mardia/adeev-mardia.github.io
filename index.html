@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#ECEAE4">
 <meta property="og:title" content="Adeev Mardia">
 <meta property="og:description" content="UC San Diego. Find me on Instagram, LinkedIn, GitHub and WhatsApp.">
-<meta property="og:image" content="adeev.jpg">
+<meta property="og:image" content="https://adeev-mardia.github.io/adeev.jpg">
+<meta property="og:url" content="https://adeev-mardia.github.io/">
 <meta property="og:type" content="profile">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='900' font-size='15' fill='%23E8430F' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
@@ -28,8 +29,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:'Archivo',sys
 .dot{display:inline-flex;align-items:center;gap:8px}
 .dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
 main{flex:1 1 auto;display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,72px);align-items:flex-start}
-figure{margin:0;flex:1 1 300px;max-width:460px;display:flex;flex-direction:column;gap:10px}
-.frame{width:100%;aspect-ratio:4/5;overflow:hidden;background:#1E1E20}
+figure{margin:0;flex:0 0 240px;max-width:240px;display:flex;flex-direction:column;gap:10px}
+.frame{width:100%;aspect-ratio:1/1;overflow:hidden;background:#1E1E20}
 .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
 figcaption{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 section{flex:999 1 420px;min-width:0;display:flex;flex-direction:column;gap:28px}
@@ -47,21 +48,20 @@ nav{display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}
 .row:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 @media (hover:hover){.row:hover{background:var(--ink);color:var(--paper)}.row:hover .a{transform:translate(4px,-4px)}}
 .bottom{color:var(--muted);font-size:12px}
-@media (min-width:901px){figure{flex:0 0 min(34%,440px)}}
 /* phones */
 @media (max-width:560px){
  .page{gap:28px}
- figure{max-width:none}
- .frame{aspect-ratio:1/1}
+ figure{flex-basis:112px;max-width:112px}
+ figcaption{display:none}
  .row{grid-template-columns:32px minmax(0,1fr) 24px;grid-template-areas:"n l a" "n h a";min-height:72px}
  .h{white-space:normal;overflow-wrap:anywhere}
 }
 /* very small phones */
 @media (max-width:340px){.top .dot{display:none}h1{font-size:60px}}
 /* tablets: photo beside name, never too tall */
-@media (min-width:561px) and (max-width:900px){figure{max-width:380px}}
+@media (min-width:561px) and (max-width:900px){figure{flex-basis:180px;max-width:180px}}
 /* short landscape phones */
-@media (max-height:500px) and (orientation:landscape){.frame{aspect-ratio:1/1}figure{max-width:260px}h1{font-size:clamp(56px,9vw,120px)}}
+@media (max-height:500px) and (orientation:landscape){figure{flex-basis:120px;max-width:120px}h1{font-size:clamp(56px,9vw,120px)}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -74,7 +74,7 @@ nav{display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}
 <main>
 <figure>
 <div class="frame">
-<img src="adeev.jpg" srcset="adeev-400.jpg 400w, adeev.jpg 800w" sizes="(max-width:560px) 92vw, 460px" width="800" height="800" alt="Portrait of Adeev Mardia" fetchpriority="high">
+<img src="adeev.jpg" srcset="adeev-400.jpg 400w, adeev.jpg 800w" sizes="(max-width:560px) 112px, 240px" width="800" height="800" alt="Portrait of Adeev Mardia" fetchpriority="high">
 </div>
 <figcaption><span>Fig. 01</span></figcaption>
 </figure>
@@ -85,8 +85,9 @@ nav{display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}
 <a class="row" href="https://www.instagram.com/adeev_mardia" target="_blank" rel="noopener"><span class="n">01</span><span class="l">Instagram</span><span class="h">@adeev_mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
 <a class="row" href="https://www.linkedin.com/in/adeev-mardia" target="_blank" rel="noopener"><span class="n">02</span><span class="l">LinkedIn</span><span class="h">/in/adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
 <a class="row" href="https://github.com/adeev-mardia" target="_blank" rel="noopener"><span class="n">03</span><span class="l">GitHub</span><span class="h">adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="https://wa.me/918056201753" target="_blank" rel="noopener"><span class="n">04</span><span class="l">WhatsApp</span><span class="h">Message me</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="tel:+918056201753"><span class="n">05</span><span class="l">Call</span><span class="h">+91 80562 01753</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="mailto:adeevmardia@gmail.com"><span class="n">04</span><span class="l">Email</span><span class="h">adeevmardia@gmail.com</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="https://wa.me/918056201753" target="_blank" rel="noopener"><span class="n">05</span><span class="l">WhatsApp</span><span class="h">Message me</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="tel:+918056201753"><span class="n">06</span><span class="l">Call</span><span class="h">+91 80562 01753</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
 </nav>
 </section>
 </main>
