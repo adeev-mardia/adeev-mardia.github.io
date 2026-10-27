@@ -26,8 +26,6 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:'Archivo',sys
 .meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
 .top{border-bottom:1.5px solid var(--ink);padding-bottom:14px}
 .top b{font-weight:700}
-.dot{display:inline-flex;align-items:center;gap:8px}
-.dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
 main{flex:1 1 auto;display:grid;grid-template-columns:240px minmax(0,1fr);grid-template-areas:"photo name" "photo tag" "photo nav";grid-template-rows:auto auto 1fr;column-gap:clamp(28px,5vw,72px);row-gap:28px;align-items:start}
 figure{grid-area:photo;margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
 .frame{width:100%;aspect-ratio:1/1;overflow:hidden;background:#1E1E20}
@@ -59,7 +57,6 @@ nav{grid-area:nav;min-width:0;display:flex;flex-direction:column;border-top:1.5p
  .h{white-space:normal;overflow-wrap:anywhere}
 }
 /* very small phones */
-@media (max-width:340px){.top .dot{display:none}}
 /* tablets: photo beside name, never too tall */
 @media (min-width:561px) and (max-width:900px){main{grid-template-columns:180px minmax(0,1fr)}}
 /* short landscape phones */
@@ -70,8 +67,7 @@ nav{grid-area:nav;min-width:0;display:flex;flex-direction:column;border-top:1.5p
 <body>
 <div class="page">
 <header class="meta top">
-<b>AM / 26</b>
-<span class="dot">Open to chat</span>
+<b>A.M.</b>
 </header>
 <main>
 <figure>
@@ -83,16 +79,16 @@ nav{grid-area:nav;min-width:0;display:flex;flex-direction:column;border-top:1.5p
 <h1>Adeev<br><span>Mardia</span></h1>
 <p class="tag"><span class="pill">UC San Diego</span><span>Freshman</span></p>
 <nav aria-label="Links">
-<a class="row" href="https://www.instagram.com/adeev_mardia" target="_blank" rel="noopener"><span class="n">01</span><span class="l">Instagram</span><span class="h">@adeev_mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="https://www.linkedin.com/in/adeev-mardia" target="_blank" rel="noopener"><span class="n">02</span><span class="l">LinkedIn</span><span class="h">/in/adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="https://github.com/adeev-mardia" target="_blank" rel="noopener"><span class="n">03</span><span class="l">GitHub</span><span class="h">adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="Adeev-Mardia-Resume.pdf" target="_blank" rel="noopener"><span class="n">04</span><span class="l">Resume</span><span class="h">PDF</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="mailto:adeevmardia@gmail.com"><span class="n">05</span><span class="l">Email</span><span class="h">adeevmardia@gmail.com</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="https://wa.me/918056201753" target="_blank" rel="noopener"><span class="n">06</span><span class="l">WhatsApp</span><span class="h">Message me</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-<a class="row" href="tel:+918056201753"><span class="n">07</span><span class="l">Call</span><span class="h">+91 80562 01753</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="https://www.linkedin.com/in/adeev-mardia" target="_blank" rel="noopener"><span class="n">01</span><span class="l">LinkedIn</span><span class="h">/in/adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="mailto:adeevmardia@gmail.com"><span class="n">02</span><span class="l">Email</span><span class="h">adeevmardia@gmail.com</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="https://wa.me/918056201753" target="_blank" rel="noopener"><span class="n">03</span><span class="l">WhatsApp</span><span class="h">Message me</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="tel:+918056201753"><span class="n">04</span><span class="l">Call</span><span class="h">+91 80562 01753</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="https://www.instagram.com/adeev_mardia" target="_blank" rel="noopener"><span class="n">05</span><span class="l">Instagram</span><span class="h">@adeev_mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="https://github.com/adeev-mardia" target="_blank" rel="noopener"><span class="n">06</span><span class="l">GitHub</span><span class="h">adeev-mardia</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<a class="row" href="Adeev-Mardia-Resume.pdf" target="_blank" rel="noopener"><span class="n">07</span><span class="l">Resume</span><span class="h">PDF</span><svg class="a" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
 </nav>
 </main>
-<footer class="meta bottom"><span>© 2026 Adeev Mardia</span><span>Say hi →</span></footer>
+<footer class="meta bottom"><span>© 2026 Adeev Mardia</span></footer>
 </div>
 </body>
 </html>
